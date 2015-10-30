@@ -1,18 +1,14 @@
 Ansible Role: rTorrent
-=====
-[![Build Status](https://travis-ci.org/cmprescott/ansible-role-rtorrent.svg?branch=master)](https://travis-ci.org/cmprescott/ansible-role-rtorrent)
+======================
 
-Ansible role to install and configure rTorrent.
-
-Requirements
-------------
-
-Default package manager of **apt** or **yum**. 
+Ansible role to configure rTorrent.
 
 Role Variables
 --------------
 
 ```yaml
+# rtorrent.rc path
+rtorrent_rc_path: /var/lib/.rtorrent/rtorrent.rc
 # ----- bandwidth settings -----
 rtorrent_min_peers: 40
 rtorrent_max_peers: 100
@@ -47,7 +43,7 @@ rtorrent_peer_exchange: "yes"
 #  (can break rtorrent when misconfigured)
 rtorrent_other_settings: []
 # Example
-#    - scgi_port = 127.0.0.1:5000 
+#    - scgi_port = 127.0.0.1:5000
 ```
 
 Dependencies
@@ -58,12 +54,12 @@ None
 Example Playbook
 -------------------------
 
-1) Install rTorrent with default settings
+1) Configure rTorrent with default settings
 
 ```yaml
 - hosts: servers-torrent
   roles:
-    - role: cmprescott.rTorrent
+    - role: anthony25.rTorrent
 ```
 
 2) Install rTorrent with custom settings
@@ -71,7 +67,7 @@ Example Playbook
 ```yaml
 - hosts: servers-torrent
   roles:
-    - role: cmprescott.rTorrent
+    - role: anthony25.rTorrent
       rtorrent_min_peers: 0
       rtorrent_max_peers: 1000
 ```
@@ -84,5 +80,5 @@ BSD
 Author Information
 ------------------
 
-Prescott Chris
-
+Anthony25 <Anthony Ruhier>
+Forked of the Prescott Chris's work
