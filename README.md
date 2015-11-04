@@ -8,7 +8,7 @@ Role Variables
 
 ```yaml
 # rtorrent.rc path
-rtorrent_rc_path: /var/lib/.rtorrent/rtorrent.rc
+rtorrent_rc_path: /var/lib/rtorrent/.rtorrent.rc
 # ----- bandwidth settings -----
 rtorrent_min_peers: 40
 rtorrent_max_peers: 100
