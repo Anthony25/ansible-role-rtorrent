@@ -28,7 +28,11 @@ rtorrent_schedule_untied_directory: "untied_directory,5,5,stop_untied="
 # ----- torrent settings -----
 rtorrent_check_hash: "no"
 rtorrent_use_udp_trackers: "yes"
+<<<<<<< HEAD
 rtorrent_encryption: "allow_incoming,enable_retry,prefer_plaintext"
+=======
+rtorrent_encryption: allow_incoming,enable_retry,prefer_plaintext
+>>>>>>> 4261536a560379694c254a802d0824a18da22c09
 rtorrent_dht: "off"
 rtorrent_dht_port: 6881
 rtorrent_peer_exchange: "yes"
