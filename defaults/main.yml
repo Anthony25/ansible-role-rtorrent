@@ -23,10 +23,9 @@ rtorrent_directory_watch: ~/rtorrent/watch
 # ----- network settings -----
 rtorrent_port_range: 49164-49164
 rtorrent_port_random: "no"
-rtorrent_ssl_verify_host: 0
 rtorrent_ssl_verify_peer: 0
 rtorrent_max_open_sockets: 999
-rtorrent_max_open_files: 0
+rtorrent_max_open_files: 1024
 rtorrent_max_open_http: 32
 rtorrent_receive_buffer_size: 0
 rtorrent_send_buffer_size: 0
