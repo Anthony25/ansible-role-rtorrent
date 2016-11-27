@@ -1,7 +1,8 @@
 ---
 # defaults file for ansible-role-rtorrent
 
-rtorrent_rc_path: "/var/lib/rtorrent/.rtorrent.rc"
+rtorrent_basedir: "/var/lib/rtorrent"
+rtorrent_rc_path: "{{ rtorrent_basedir }}/.rtorrent.rc"
 
 # ----- bandwidth settings -----
 rtorrent_min_peers: 40
@@ -16,8 +17,8 @@ rtorrent_upload_rate: 0
 rtorrent_numwant: -1
 
 # ----- directory settings -----
-rtorrent_directory_download: ~/rtorrent/download
-rtorrent_directory_session: ~/rtorrent/.session
+rtorrent_directory_download: "{{ rtorrent_basedir }}/download"
+rtorrent_directory_session: "{{ rtorrent_basedir }}/session"
 
 # directory_watch can be a directory path (like the default value), a dict or
 # a list of dicts for multiple watch directories.
@@ -35,7 +36,7 @@ rtorrent_directory_session: ~/rtorrent/.session
 #       download: ~/rtorrent/download_custom
 # When not set, refresh_time={{ rtorrent_global_refresh_time }} and
 # download={{ rtorrent_directory_download }}
-rtorrent_directory_watch: ~/rtorrent/watch
+rtorrent_directory_watch: "{{ rtorrent_basedir }}/watch"
 
 # Move completed torrents to the download directory as set in their watch
 # directory
