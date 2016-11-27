@@ -123,6 +123,11 @@ protocol.pex.set = {{ rtorrent_peer_exchange }}
 schedule = {{ rtorrent_schedule_watch_directory }}
 schedule = {{ rtorrent_schedule_untied_directory }}
 
+# Remove data when erasing torrents
+{% if rtorrent_delete_erased %}
+method.set_key = event.download.erased,delete_erased,"execute=rm,-rf,--,$d.base_path="
+{% endif %}
+
 # Whether to allocate disk space for a new torrent.
 system.file.allocate.set = {{ rtorrent_file_allocate }}
 
@@ -143,4 +148,3 @@ system.file.allocate.set = {{ rtorrent_file_allocate }}
 # before forcing. Overworked systems might need lower values to get a
 # decent hash checking rate.
 #hash_max_tries = 10
-

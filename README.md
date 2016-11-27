@@ -60,6 +60,8 @@ rtorrent_pieces_preload_min_rate: 5120
 # ----- other settings -----
 #  (can break rtorrent when misconfigured)
 rtorrent_file_allocate: 0
+# Delete data of erased torrents
+rtorrent_delete_erased: false
 rtorrent_other_settings: []
 # Example
 #    - scgi_port = 127.0.0.1:5000
