@@ -1,9 +1,6 @@
 - hosts: all
   pre_tasks:
-    - name: "all | ensure torrent folders exist"
-      file: path={{item}} state=directory
-      with_items:
-       - "{{ rtorrent_directory_session }}"
-       - "{{ rtorrent_directory_download }}"
+    - name: "Ensure session dirs exists"
+      file: path="{{rtorrent_directory_session}}" state=directory
   roles:
     - role: ../..
