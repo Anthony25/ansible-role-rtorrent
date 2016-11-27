@@ -78,7 +78,7 @@ Example Playbook
 ```yaml
 - hosts: servers-torrent
   roles:
-    - role: anthony25.rTorrent
+    - role: Anthony25.rTorrent
 ```
 
 2) Install rTorrent with custom settings
@@ -86,7 +86,7 @@ Example Playbook
 ```yaml
 - hosts: servers-torrent
   roles:
-    - role: anthony25.rTorrent
+    - role: Anthony25.rTorrent
       rtorrent_min_peers: 0
       rtorrent_max_peers: 1000
 ```
