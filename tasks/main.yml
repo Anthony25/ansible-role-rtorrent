@@ -1,6 +1,24 @@
-# ansible-role-rtorrent/tasks/main.yml
 ---
-# tasks file for ansible-role-rtorrent
 
-- name: all | ensure ~/.rtorrent.rc configured
-  template: src=rtorrent.rc.j2 dest="{{ rtorrent_rc_path }}"
+- name: Include distribution specific variables
+  include_vars: "{{ item }}"
+  with_first_found:
+    - files:
+      - "vars/{{ ansible_distribution }}.yml"
+      skip: true
+
+- name: Include release specific variables
+  include_vars: "{{ item }}"
+  with_first_found:
+    - files:
+      - "vars/{{ ansible_distribution_release }}.yml"
+      skip: true
+
+- include: install.yml
+
+- name: configure ~/.rtorrent.rc
+  template:
+    src: rtorrent.rc.j2
+    dest: "{{ rtorrent_rc_path }}"
+
+# vim: set ts=2 sw=2:

@@ -1,12 +1,16 @@
 Ansible Role: rTorrent
 ======================
 
-Ansible role to configure rTorrent.
+Ansible role to install and configure rTorrent.
 
 Role Variables
 --------------
 
 ```yaml
+# defined per distribution in ``vars/``. Override to skip the install or use
+# different packages
+rtorrent_packages: []
+
 rtorrent_basedir: "/var/lib/rtorrent"
 rtorrent_rc_path: "{{ rtorrent_basedir }}/.rtorrent.rc"
 
