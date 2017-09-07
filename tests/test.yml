@@ -1,6 +1,0 @@
-- hosts: all
-  pre_tasks:
-    - name: "Ensure session dirs exists"
-      file: path="{{rtorrent_directory_session}}" state=directory
-  roles:
-    - role: ../..

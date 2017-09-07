@@ -57,7 +57,9 @@ rtorrent_xmlrpc_size_limit: 524288
 # ----- schedule settings -----
 # Set refresh time for untied_directory and watch directories
 rtorrent_global_refresh_time: 5
-rtorrent_schedule_untied_directory: "untied_directory,{{ rtorrent_global_refresh_time }},{{ rtorrent_global_refresh_time }},stop_untied="
+rtorrent_schedule_untied_directory: >
+    "untied_directory,{{ rtorrent_global_refresh_time }},"
+    "{{ rtorrent_global_refresh_time }},stop_untied="
 
 # ----- torrent settings -----
 rtorrent_check_hash: "no"
@@ -81,4 +83,6 @@ rtorrent_file_allocate: 0
 rtorrent_delete_erased: false
 rtorrent_other_settings: []
 # Example
-#    - scgi_port = 127.0.0.1:5000
+#   - scgi_port = 127.0.0.1:5000
+
+# vim: set ts=2 sw=2:
