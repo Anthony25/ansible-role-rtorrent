@@ -1,18 +1,6 @@
 ---
 
-- name: Include distribution specific variables
-  include_vars: "{{ item }}"
-  with_first_found:
-    - files:
-      - "vars/{{ ansible_distribution }}.yml"
-      skip: true
-
-- name: Include release specific variables
-  include_vars: "{{ item }}"
-  with_first_found:
-    - files:
-      - "vars/{{ ansible_distribution_release }}.yml"
-      skip: true
+- include: dist_vars.yml
 
 - include: install.yml
 

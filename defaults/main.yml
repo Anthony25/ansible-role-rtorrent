@@ -1,8 +1,6 @@
 ---
 # defaults file for ansible-role-rtorrent
 
-rtorrent_packages: []
-
 rtorrent_basedir: "/var/lib/rtorrent"
 rtorrent_rc_path: "{{ rtorrent_basedir }}/.rtorrent.rc"
 
