@@ -11,8 +11,8 @@ Role Variables
 # different packages
 rtorrent_packages: []
 
-rtorrent_basedir: "/var/lib/rtorrent"
-rtorrent_rc_path: "{{ rtorrent_basedir }}/.rtorrent.rc"
+rtorrent_basedir: "~/rtorrent"
+rtorrent_rc_path: "~/.rtorrent.rc"
 
 # ----- bandwidth settings -----
 rtorrent_min_peers: 40
