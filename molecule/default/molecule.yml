@@ -14,13 +14,9 @@ platforms:
   - name: ansible-debian
     image: debian:latest
   - name: ansible-arch
-    image: archimg/base:full
-    command: /lib/systemd/systemd
-    privileged: true
+    image: archlinux/base:latest
   - name: ansible-fedora
     image: fedora:latest
-    command: /usr/lib/systemd/systemd
-    privileged: true
 
 scenario:
   name: default
