@@ -24,7 +24,7 @@ galaxy_info:
         - all
     - name: Archlinux
 
-  categories:
+  galaxy_tags:
     - networking
     - packaging
 dependencies: []
